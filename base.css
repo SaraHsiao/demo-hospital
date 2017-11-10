@@ -1,4 +1,15 @@
-*  {padding: 0px; margin: 0px;}
+/* All tags */
+*  {
+    padding: 0px; 
+    margin: 0px; 
+    text-decoration: none
+}
+
+select,input {
+    border: none; 
+    outline: none
+}
+
 /* #top 模塊內樣式 */
 .top {
     line-height: 30px;
@@ -41,6 +52,7 @@
     top: 29px;
     background-color: orange;
 }
+
 /* nav 模塊內樣式 */
 .nav .link {
     display: inline-block;
@@ -51,7 +63,6 @@
     color: #fff;
     min-width: 80px;
     text-align: center;
-    text-decoration: none
 }
 
 .nav a:hover {
@@ -74,10 +85,78 @@
     top: 36px;
 }
 
+/* #banner 模塊內樣式 */
+.banner-search {
+    background-color: #fafafa;
+}
 
+.banner-help .caption,
+.banner-search .caption {
+    height: 22px;
+    padding: 15px 0 15px 0;
+    text-align: center
+}
 
+.banner-help .caption .text,
+.banner-search .caption .text {
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    padding-left: 28px;
+    font-size: 16px;
+    background: url(./img/icon-help.png) no-repeat 0 0;
+}
 
+.banner-search .form {
+    height: 150px
+}
 
+.banner-search .form .line {
+    padding-bottom: 9px;
+    text-align: center
+}
 
+.banner-search .form .line select {
+    width: 170px;
+    flex: 12px;
+    z-index: 0;
+    border: 1px solid #dcdddd;
+    height: 26px;
+    line-height: 26px;
+    padding: 2px 0;
+    color: #666
+}
 
+.banner-search .submit {
+    height: 32px;
+    text-align: center;
+}
 
+.banner-search .submit .button {
+    width: 108px;
+    height: 33px;
+    background-color: #fecd09;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.banner-help {
+    background-color: #fafafa;
+}
+
+.banner-help .caption .text {
+    color: #00b3ea;
+    background-position: 0 -23px;
+}
+.banner-help .link {
+    color: #00b3ea;
+    display: inline-block;
+    width: 68px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+    text-align: center;
+    padding: 0 0 8px 26px;
+    
+}

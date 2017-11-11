@@ -160,3 +160,183 @@ select,input {
     padding: 0 0 8px 26px;
     
 }
+
+/* #content 模塊那樣式  */
+.content-news {
+    background-color: #fff;
+    border: 1px solid #f4f6fa
+}
+.content-close .caption,
+.content-news .caption {
+    height: 38px;
+    line-height: 38px;
+    background-color: #f4f6fa;
+    text-indent: 20px;
+    color: #fec009;
+    font-size: 15px;
+}
+.content-close .more,
+.content-news .more {
+    float: right;
+    padding-right: 22px;
+    font-size: 12px;
+    color: #868686
+}
+.content-close .list,
+.content-news .list {
+    padding: 15px 20px 13px 35px;
+    line-height: 29px;
+    font-size: 12px;
+    background: url(./img/list-yellow.jpg) no-repeat 17px 20px
+}
+.content-close .list .link,
+.content-news .list .link {
+    display: block;
+    color: #969696;
+    height: 29px
+}
+
+.content-close {
+    background-color: #fff;
+    border: 1px solid #f4f6fa
+}
+
+.content-close .caption {
+    color: #4ab4ed
+}
+
+.content-close .list {
+    background: url(./img/list-blue.jpg) no-repeat 17px 20px
+}
+
+.content-tab {
+    background: none;
+}
+
+.content-tab .caption {
+    height: 34px;
+    line-height: 34px;
+    background-color: #f5f6fa;
+}
+
+.content-tab .caption .item {
+    display: inline-block;
+    width: 112px;
+    height: 34px;
+    text-align: center;
+    float: left;
+    color: #00b3ea
+}
+
+.content-tab .block {
+    border: 1px solid #f4f6fa;
+    height: 432px
+}
+.content-tab .block-caption-item:hover,
+.content-tab .caption .item:hover {
+    background-color: #00b3ea;
+    color: #f5f6fa
+}
+
+.content-tab .block-caption {
+    height: 26px;
+    line-height: 26px;
+    padding: 8px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.content-tab .block-caption-item {
+    display: block; /* 使用這個是為了後面設定寬和高，給使用者去點擊 */
+    padding: 0 10px 0 10px;
+    font-size: 12px;
+    color: #4c4948;
+    float: left;
+}
+
+.content-tab .block-content {
+    padding: 16px 12px;
+}
+
+.content-tab .block-list {
+
+}
+
+.content-tab .block-content .block-more {
+    display: block;
+    line-height: 55px;
+    text-align: center;
+    color: #5084c4;
+    font-size: 14px
+}
+
+/* 醫院的列表 - 容器 */
+.content-tab .block-content .block-list {
+
+}
+.content-tab .block-content .block-list .item {
+    float: left;
+    width: 216px;
+    height: 102px;
+    padding: 0 20px 10px 120px;
+    position: relative;
+    font-size: 12px
+}
+
+.content-tab .block-content .block-list .item img {
+    width: 110px;
+    height: 90px;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+.content-tab .block-content .block-list .item-name {
+    color: #036eb7;
+    font-size: 14px;
+    line-height: 21px;
+    padding-top: 13px
+}
+
+.content-tab .block-content .block-list .item-level {
+    float: right;
+    color: #969696;
+    font-size: 12px
+}
+
+.content-tab .block-content .block-list .item-phone,
+.content-tab .block-content .block-list .item-address {
+    line-height: 18px;
+    padding-bottom: 4px;
+    color: #666
+}
+
+/* 醫院文案的列表 - 容器 */
+.content-tab .block-content .block-text-list {
+
+}
+
+.content-tab .block-content .block-text-list .item {
+    display: block;
+    width: 351px;
+    height: 27px;
+    font-size: 14px;
+    color: #666;
+    padding-top: 8px;
+    float: left;
+    border-bottom: 1px dashed #dcdddd;
+}
+
+.content-tab .block-content .block-text-list .item:nth-child(2n) {
+    margin-left: 13px
+}
+
+/* #footer 模塊內樣式 */
+.footer {
+    line-height: 70px;
+    text-align: center;
+    font-size: 12px;
+    color: #666
+}
+
+
+
+

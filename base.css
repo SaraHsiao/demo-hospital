@@ -50,7 +50,7 @@ select,input {
     position: absolute;
     right: 0px;
     top: 29px;
-    background-color: orange;
+    /* background-color: orange; */
 }
 
 /* nav 模塊內樣式 */
@@ -228,10 +228,22 @@ select,input {
     color: #00b3ea
 }
 
+.content-tab .block-caption .item_focus,
+.content-tab .caption .item_focus {
+    background-color: #60bff2;
+    color: #fff
+} 
+
+/* .item_focus {
+    background-color: #60bff2;
+    color: #fff;
+} */
+
 .content-tab .block {
     border: 1px solid #f4f6fa;
     height: 432px
 }
+
 .content-tab .block-caption-item:hover,
 .content-tab .caption .item:hover {
     background-color: #00b3ea;

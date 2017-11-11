@@ -1,57 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Demo-hospital</title>
-<link rel="stylesheet" href="./layout.css">
-<link rel="stylesheet" href="./base.css">
+    <!-- 引入 jQuery 的 1.12.4 這是兼任IE6-8瀏覽器 -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+    <!-- 引入 jQuery 的 3.2.1  -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <link type="text/css" rel="stylesheet" href="./layout.css">
+    <link type="text/css" rel="stylesheet" href="./base.css">
+    <link type="text/css" rel="stylesheet" href="./ui.css">
+    <script type="text/javascript" src="./ui.js"></script>
 </head>
+
 <body>
-    <div id="top" class="top">  
-       <div class="wrap">
-           <p class="call"><img src="./img/icon-call.png">(02)1234-5678電話預約</p>
-           <p class="welcome">歡迎來到城市Demo醫院預約掛號平台&nbsp;&nbsp;
-           <a href="#">Sign in</a>
-           <a href="#">Sign up</a>
-           <a href="#">Helps</a>
-       </div>
+    <div id="top" class="top">
+        <div class="wrap">
+            <p class="call">
+                <img src="./img/icon-call.png">(02)1234-5678電話預約</p>
+            <p class="welcome">歡迎來到城市Demo醫院預約掛號平台&nbsp;&nbsp;
+                <a href="#">Sign in</a>
+                <a href="#">Sign up</a>
+                <a href="#">Helps</a>
+        </div>
     </div>
 
     <div id="header" class="header">
         <div class="wrap clearfix">
-            <a class="logo" href="#"><img src="./img/logo.png"></a>
-            <div class="search"></div>
+            <a class="logo" href="#">
+                <img src="./img/logo.png">
+            </a>
+
+            <div class="search ui-search">
+                <div class="ui-search-selected">醫院
+                    <div class="ui-search-selected-list">
+                        <a href="#1">科室</a>
+                        <a href="#1">疾病</a>
+                        <a href="#1">醫院</a>
+                    </div>
+                </div>
+                <input type="text" name="search-content" class="ui-search-input" placeholder="🔍 請輸入搜索內容">
+                <a href="#" class="ui-search-submit" type="submit">&nbsp;</a>
+            </div>
+
         </div>
-        
     </div>
 
     <div id="nav" class="nav">
         <div class="wrap">
             <div class="link menu">全部科室
-                <div class="menu-list"></div>
+                <div class="menu-list ui-menu">
+
+                    <div class="ui-menu-item clearfix">
+                        <a href="#1" class="ui-menu-item-department">內科</a>
+                        <a href="#2" class="ui-menu-item-disease">高血壓</a>
+                        <a href="#3" class="ui-menu-item-disease">心臟病</a>
+
+                        <div class="ui-menu-item-detail">
+                            <div class="ui-menu-item-detail-group">
+
+                                <div class="ui-menu-item-detail-group-caption">內科</div>
+
+                                <div class="ui-menu-item-detail-group-list">
+                                    <a href="#1">心血管內科</a>
+                                    <a href="#1">神經內科</a>
+                                    <a href="#1">內分泌科</a>
+                                    <a href="#1">血液科</a>
+                                    <a href="#1">心血管內科</a>
+                                    <a href="#1">心血管內科</a>
+                                    <a href="#1">神經內科</a>
+                                    <a href="#1">內分泌科</a>
+                                    <a href="#1">血液科</a>
+                                    <a href="#1">心血管內科</a>
+                                    <a href="#1">心血管內科</a>
+                                    <a href="#1">神經內科</a>
+                                    <a href="#1">內分泌科</a>
+                                    <a href="#1">血液科</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <a href="#" class="link">醫院掛號</a>
+            <a href="#" class="link">按醫院掛號</a>
             <a href="#" class="link">按科室掛號</a>
             <a href="#" class="link">按疾病掛號</a>
             <a href="#" class="link">最新公告</a>
             <a href="#" class="link right">社會知名醫院</a>
         </div>
-        
+
     </div>
 
     <div id="banner" class="banner">
 
         <div class="banner-slider"></div>
         <div class="banner-search">
-            <div class="caption"><span class="text">快速預約</span></div>
+            <div class="caption">
+                <span class="text">快速預約</span>
+            </div>
 
             <div class="form">
-                <div class="line"><select name="area"><option>醫院地區</option></select></div>
-                <div class="line"><select name="level"><option>醫院等級</option></select></div>
-                <div class="line"><select name="name"><option>醫院名稱</option></select></div>
-                <div class="line"><select name="department"><option>醫院科室</option></select></div>
+                <div class="line">
+                    <select name="area">
+                        <option>醫院地區</option>
+                    </select>
+                </div>
+                <div class="line">
+                    <select name="level">
+                        <option>醫院等級</option>
+                    </select>
+                </div>
+                <div class="line">
+                    <select name="name">
+                        <option>醫院名稱</option>
+                    </select>
+                </div>
+                <div class="line">
+                    <select name="department">
+                        <option>醫院科室</option>
+                    </select>
+                </div>
             </div>
 
             <div class="submit">
@@ -61,7 +134,9 @@
         </div>
 
         <div class="banner-help">
-            <div class="caption"><span class="text">幫助中心</span></div>
+            <div class="caption">
+                <span class="text">幫助中心</span>
+            </div>
             <div class="list">
                 <a href="#" class="link">帳號指南</a>
                 <a href="#" class="link">預約指南</a>
@@ -77,77 +152,104 @@
         <div class="wrap clearfix">
             <div class="content-tab">
                 <div class="caption">
-                    <a href="#8" class="item">醫院</a>
+                    <a href="#8" class="item item_focus">醫院</a>
+                    <!-- item_focus -->
                     <a href="#7" class="item">科室</a>
                 </div>
 
                 <div class="block">
-                    <div class="item">
-
-                        <div class="block-caption">
-                            <a href="#1" class="block-caption-item">全部</a>
-                            <a href="#1" class="block-caption-item">全部</a>
+                    <div class="item" style="display:block">
+                        <div class="block-caption item_focus">
+                            <a href="#1" class="block-caption-item item_focus">全部</a>
+                            <!-- item_focus -->
                             <a href="#1" class="block-caption-item">台北</a>
                             <a href="#1" class="block-caption-item">桃園</a>
                             <a href="#1" class="block-caption-item">新竹</a>
+                            <a href="#1" class="block-caption-item">花蓮</a>
                             <a href="#1" class="block-caption-item">台中</a>
                             <a href="#1" class="block-caption-item">台南</a>
-                            <a href="#1" class="block-caption-item">高雄</a> 
+                            <a href="#1" class="block-caption-item">高雄</a>
                             <a href="#1" class="block-caption-item">宜蘭</a>
                             <a href="#1" class="block-caption-item">台東</a>
                             <a href="#1" class="block-caption-item">其他</a>
                         </div>
 
                         <div class="block-content">
-                            <div class="block-list clearfix">
+                            <div class="block-wrap">
+                                <div class="block-list clearfix">
 
-                                <div class="item">
-                                    <img src="./img/hospital-1.jpg" alt="台大醫院">
-                                    <div class="item-name">台大醫院<span class="item-level">「三級甲等」</span></div>
-                                    <div class="item-phone">電話：(02)2312-3456</div>
-                                    <div class="item-address">地址：100台北市中正區中山南路7號</div>
+                                    <div class="item">
+                                        <img src="./img/hospital-1.jpg" alt="台大醫院">
+                                        <div class="item-name">台大醫院
+                                            <span class="item-level">「三級甲等」</span>
+                                        </div>
+                                        <div class="item-phone">電話：(02)2312-3456</div>
+                                        <div class="item-address">地址：100台北市中正區中山南路7號</div>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="./img/hospital-2.jpg" alt="台大醫院">
+                                        <div class="item-name">台大醫院
+                                            <span class="item-level">「三級甲等」</span>
+                                        </div>
+                                        <div class="item-phone">電話：(02)2312-3456</div>
+                                        <div class="item-address">地址：100台北市中正區中山南路7號</div>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="./img/hospital-3.jpg" alt="台大醫院">
+                                        <div class="item-name">台大醫院
+                                            <span class="item-level">「三級甲等」</span>
+                                        </div>
+                                        <div class="item-phone">電話：(02)2312-3456</div>
+                                        <div class="item-address">地址：100台北市中正區中山南路7號</div>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="./img/hospital-4.jpg" alt="台大醫院">
+                                        <div class="item-name">台大醫院
+                                            <span class="item-level">「三級甲等」</span>
+                                        </div>
+                                        <div class="item-phone">電話：(02)2312-3456</div>
+                                        <div class="item-address">地址：100台北市中正區中山南路7號</div>
+                                    </div>
+
                                 </div>
 
-                                <div class="item">
-                                    <img src="./img/hospital-2.jpg" alt="台大醫院">
-                                    <div class="item-name">台大醫院<span class="item-level">「三級甲等」</span></div>
-                                    <div class="item-phone">電話：(02)2312-3456</div>
-                                     <div class="item-address">地址：100台北市中正區中山南路7號</div>
+                                <div class="block-text-list clearfix">
+                                    <a href="#9" class="item">首都兒科研究所付屬兒童醫院
+                                        <span class="item-level">「三級甲等」</span>
+                                    </a>
+                                    <a href="#9" class="item">首都兒科研究所付屬兒童醫院
+                                        <span class="item-level">「三級甲等」</span>
+                                    </a>
+                                    <a href="#9" class="item">首都兒科研究所付屬兒童醫院
+                                        <span class="item-level">「三級甲等」</span>
+                                    </a>
+                                    <a href="#9" class="item">首都兒科研究所付屬兒童醫院
+                                        <span class="item-level">「三級甲等」</span>
+                                    </a>
+                                    <a href="#9" class="item">首都兒科研究所付屬兒童醫院
+                                        <span class="item-level">「三級甲等」</span>
+                                    </a>
+                                    <a href="#9" class="item">首都兒科研究所付屬兒童醫院
+                                        <span class="item-level">「三級甲等」</span>
+                                    </a>
                                 </div>
 
-                                <div class="item">
-                                    <img src="./img/hospital-3.jpg" alt="台大醫院">
-                                    <div class="item-name">台大醫院<span class="item-level">「三級甲等」</span></div>
-                                    <div class="item-phone">電話：(02)2312-3456</div>
-                                    <div class="item-address">地址：100台北市中正區中山南路7號</div>
-                                </div>
-
-                                <div class="item">
-                                    <img src="./img/hospital-4.jpg" alt="台大醫院">
-                                    <div class="item-name">台大醫院<span class="item-level">「三級甲等」</span></div>
-                                    <div class="item-phone">電話：(02)2312-3456</div>
-                                    <div class="item-address">地址：100台北市中正區中山南路7號</div>
-                                </div>
-
+                                <a href="#" class="block-more">更多醫院</a>
                             </div>
-
-                            <div class="block-text-list clearfix">
-                                <a href="#9" class="item">首都兒科研究所付屬兒童醫院<span class="item-level">「三級甲等」</span></a>
-                                <a href="#9" class="item">首都兒科研究所付屬兒童醫院<span class="item-level">「三級甲等」</span></a>
-                                <a href="#9" class="item">首都兒科研究所付屬兒童醫院<span class="item-level">「三級甲等」</span></a>
-                                <a href="#9" class="item">首都兒科研究所付屬兒童醫院<span class="item-level">「三級甲等」</span></a>
-                                <a href="#9" class="item">首都兒科研究所付屬兒童醫院<span class="item-level">「三級甲等」</span></a>
-                                <a href="#9" class="item">首都兒科研究所付屬兒童醫院<span class="item-level">「三級甲等」</span></a>
-                            </div>
-                            
-                            <a href="#" class="block-more">更多醫院</a>
+                            <div class="block-wrap" style="display:none">台北城市內容</div>
+                            <div class="block-wrap" style="display:none">桃園城市內容</div>
                         </div>
                     </div>
                     <div class="item" style="display:none">科室內容</div>
                 </div>
             </div>
             <div class="content-news">
-                <div class="caption">最新公告<a href="#8" class="more">|更多</a></div>
+                <div class="caption">最新公告
+                    <a href="#8" class="more">|更多</a>
+                </div>
 
                 <div class="list">
                     <a href="#9" class="link">阜外醫院特需要 門診暫停更新號...</a>
@@ -160,7 +262,9 @@
 
             </div>
             <div class="content-close">
-                <div class="caption">停診公告<a href="#8" class="more">|更多</a></div>
+                <div class="caption">停診公告
+                    <a href="#8" class="more">|更多</a>
+                </div>
 
                 <div class="list">
                     <a href="#9" class="link">首都醫科大學附屬高雄大正醫院消...</a>
@@ -180,4 +284,5 @@
         copyright © 2017 KaFeiDou 版權所有
     </div>
 </body>
+
 </html>

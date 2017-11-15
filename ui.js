@@ -41,12 +41,38 @@ $.fn.UiTab=function(header,content) {
         return false;
     })
 }
+
+// ui-backTop
+$.fn.UiBackTop=function() {
+    var ui=$(this);
+    var el=$('<a href="#0" class="ui-backTop"></a>');
+    ui.append( el );
+
+    var windowHeight=$(window).height();
+    $(window).scroll(function() {
+        var top=$('body').scrollTop();
+        if(top > windowHeight) {
+            el.show();
+        } else {
+            el.hide();
+        }
+    })
+    el.click(function() {
+        $(window).scrollTop(0);
+    })
+}
+
+// ui-slider
+$.fn.UiSlider=function() {
+
+}
  
 // 頁面的腳本邏輯
 $(function() {
     $('.ui-search').UiSearch();
 
     $('.content-tab').UiTab('.caption > .item','.block > .item');
-
     $('.content-tab .block .item').UiTab('.block-caption > a','.block-content > .block-wrap')
+    $('.ui-backTop').UiBackTop();
+    $('.ui-slider').UiSlider();
 })
